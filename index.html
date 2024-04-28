@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="hataLogo.jpg" type="image/x-icon">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <title>Hata Template</title>
+    </head>
+    <body class="bg-amber-500">
+        <div x-data="{ open: 1 }" class="font-mono text-center bg-amber-500">
+            <h1 class="flex justify-center items-center text-4xl font-bold py-[1%]">Hata - Edinburgh<img src="hataLogo.jpg" alt="Hata-logo" class="mix-blend-multiply w-8"></h1>
+            <div class="py-3">
+                <button x-show="open != 1" @click="open = 1" class="w-1/5 py-1 bg-white hover:bg-orange-200 border-2 border-black">Home</button>
+                <button x-show="open == 1" @click="open = 1" class="w-1/5 py-1 bg-orange-200 hover:bg-orange-200 border-2 border-black">Home</button>
+
+                <button x-show="open != 2" @click="open = 2" class="w-1/5 py-1 bg-white hover:bg-orange-200 border-2 border-black">Menu</button>
+                <button x-show="open == 2" @click="open = 2" class="w-1/5 py-1 bg-orange-200 hover:bg-orange-200 border-2 border-black">Menu</button>
+
+                <button x-show="open != 3" @click="open = 3" class="w-1/5 py-1 bg-white hover:bg-orange-200 border-2 border-black">About us</button>
+                <button x-show="open == 3" @click="open = 3" class="w-1/5 py-1 bg-orange-200 hover:bg-orange-200 border-2 border-black">About us</button>
+
+                <button x-show="open != 4" @click="open = 4" class="w-1/5 py-1 bg-white hover:bg-orange-200 border-2 border-black">Contact</button>
+                <button x-show="open == 4" @click="open = 4" class="w-1/5 py-1 bg-orange-200 hover:bg-orange-200 border-2 border-black">Contact</button>
+            </div>
+            <div>
+                <div x-show="open == 1" class="bg-white w-4/5 mx-auto py-[3%] rounded-lg">
+                    <h1 class="text-3xl font-semibold">Home</h1>
+                    <div class="grid grid-cols-2 gap-[3%] mx-[3%] py-[3%]">
+                        <img src="./food-1.jpg" alt="Food-example" class="rounded-lg self-center">
+                        <div>
+                            <h1 class="text-4xl font-bold">Hata</h1>
+                            <p>
+                                Description
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, eligendi in inventore minus pariatur quam quis rerum voluptates? Culpa deleniti, earum esse fuga impedit ipsam nostrum pariatur quaerat reprehenderit voluptatem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div x-show="open == 2" class="bg-white w-4/5 mx-auto py-[3%] rounded-lg">
+                    <h1 class="text-3xl font-semibold">Menu</h1>
+                    <div class="py-[3%]">
+                        <h2 class="text-2xl font-bold">Drinks</h2>
+                        <div class="grid grid-cols-3 gap-[3%] px-[3%]">
+                            <div>
+                                <img src="./drink-1.jpg" alt="Drink-1" class="rounded-md">
+                                <h2 class="font-bold">Name</h2>
+                                <p>Description</p>
+                            </div>
+                            <div>
+                                <img src="./drink-2.jpg" alt="Drink-2" class="rounded-md">
+                                <h2 class="font-bold">Name</h2>
+                                <p>Description</p>
+                            </div>
+                            <div>
+                                <img src="./drink-3.jpg" alt="Drink-3" class="rounded-md">
+                                <h2 class="font-bold">Name</h2>
+                                <p>Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-[3%]">
+                        <h2 class="text-2xl font-bold">Food</h2>
+                        <div class="grid grid-cols-3 gap-[3%] px-[3%]">
+                            <div>
+                                <img src="./food-1.jpg" alt="Food-1" class="rounded-md">
+                                <h2 class="font-bold">Name</h2>
+                                <p>Description</p>
+                            </div>
+                            <div>
+                                <img src="./food-2.jpg" alt="Food-2" class="rounded-md">
+                                <h2 class="font-bold">Name</h2>
+                                <p>Description</p>
+                            </div>
+                            <div>
+                                <img src="./food-3.jpg" alt="Food-3" class="rounded-md">
+                                <h2 class="font-bold">Name</h2>
+                                <p>Description</p>
+                            </div>
+                            <div>
+                                <img src="./food-4.jpg" alt="Food-4" class="rounded-md">
+                                <h2 class="font-bold">Name</h2>
+                                <p>Description</p>
+                            </div>
+                            <div>
+                                <img src="./food-5.jpg" alt="Food-5" class="rounded-md">
+                                <h2 class="font-bold">Name</h2>
+                                <p>Description</p>
+                            </div>
+                            <div>
+                                <img src="./food-6.jpg" alt="Food-6" class="rounded-md">
+                                <h2 class="font-bold">Name</h2>
+                                <p>Description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div x-show="open == 3" class="bg-white w-4/5 mx-auto py-[3%] rounded-lg">
+                    <div class="grid grid-cols-2 gap-[3%] mx-[3%] py-[3%]">
+                        <img src="./food-5.jpg" alt="Food-example" class="rounded-md self-center">
+                        <div>
+                            <h1 class="text-3xl font-semibold">About us</h1>
+                            <p>
+                                Description
+                                <br>
+                                (Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Ab aliquid consequatur deserunt distinctio, eaque facere
+                                hic id, ipsa ipsam quia repellat sapiente soluta tempore
+                                ullam voluptatibus. Enim ipsa ipsum sit.)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div x-show="open == 4" class="bg-white w-4/5 mx-auto py-[3%] rounded-lg">
+                    <div class="grid grid-cols-2 gap-[3%] mx-[3%] py-[3%]">
+                        <img src="./food-5.jpg" alt="Food-example" class="rounded-md self-center">
+                        <div>
+                            <h1 class="text-3xl font-semibold">Contact</h1>
+                            <address>
+                                Hata, 5 Rodney St, Edinburgh EH7 4EN
+                            </address>
+                            <p>hatac1819@gmail.com // 123-456-7890 </p>
+                            <p class="py-5">We would like to hear from you, write to us:</p>
+                            <form action="">
+                                <input type="text" placeholder="Name" class="w-[80%] py-[1%] pl-2 rounded-md border-2 border-black placeholder-black my-[.5%]">
+                                <br>
+                                <input type="email" placeholder="Email" class="w-[80%] py-[1%] pl-2 rounded-md border-2 border-black placeholder-black my-[.5%]">
+                                <br>
+                                <input type="tel" placeholder="Phone" class="w-[80%] py-[1%] pl-2 rounded-md border-2 border-black placeholder-black my-[.5%]">
+                                <br>
+                                <textarea class="w-[80%] pl-2 rounded-md border-2 border-black placeholder-black my-[.5%]"></textarea>
+                                <br>
+                                <input type="submit" class="w-[40%] p-1 rounded-lg border-2 border-black bg-amber-500 hover:bg-amber-600">
+                            </form>
+                        </div>
+                    </div>
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17866.02118434432!2d-3.1966321!3d55.9623242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c76c41503e03%3A0x66643c6c59c46c31!2sHata!5e0!3m2!1sen!2suk!4v1714306980695!5m2!1sen!2suk"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-[80%] mx-auto rounded-lg"
+                    ></iframe>
+                </div>
+            </div>
+            <div class="py-[2%]">©2024 Hata | Website by <a href="https://georgiy.co.uk/" target="_blank">Georgiy Cherevatenko</a></div>
+        </div>
+    </body>
+</html>
